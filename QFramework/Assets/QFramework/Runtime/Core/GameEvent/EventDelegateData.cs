@@ -66,7 +66,7 @@ namespace QFramework
             {
                 if (!m_existDelegates.Remove(handler))
                 {
-                    Debugger.Fatal("Delete handle failed, not exist, EventId: {0}", EventString2IdUtil.Id2EventString(m_eventType));
+                    Debugger.Fatal("Delete handle failed, not exist, EventId: {0}", GameEventUtil.ToString(m_eventType));
                 }
             }
         }

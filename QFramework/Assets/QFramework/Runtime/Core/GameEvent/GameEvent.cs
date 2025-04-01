@@ -37,7 +37,7 @@ namespace QFramework
         /// <returns>是否监听成功。</returns>
         public static bool AddEventListener(string eventType, Delegate handler)
         {
-            return m_eventMgr.Dispatcher.AddEventListener(EventString2IdUtil.EventString2Id(eventType), handler);
+            return m_eventMgr.Dispatcher.AddEventListener(GameEventUtil.ToStringId(eventType), handler);
         }
 
         /// <summary>
@@ -146,7 +146,7 @@ namespace QFramework
         /// <returns></returns>
         public static bool AddEventListener(string eventType, Action handler)
         {
-            return m_eventMgr.Dispatcher.AddEventListener(EventString2IdUtil.EventString2Id(eventType), handler);
+            return m_eventMgr.Dispatcher.AddEventListener(GameEventUtil.ToStringId(eventType), handler);
         }
 
         /// <summary>
@@ -158,7 +158,7 @@ namespace QFramework
         /// <returns></returns>
         public static bool AddEventListener<T1>(string eventType, Action<T1> handler)
         {
-            return m_eventMgr.Dispatcher.AddEventListener(EventString2IdUtil.EventString2Id(eventType), handler);
+            return m_eventMgr.Dispatcher.AddEventListener(GameEventUtil.ToStringId(eventType), handler);
         }
 
         /// <summary>
@@ -171,7 +171,7 @@ namespace QFramework
         /// <returns></returns>
         public static bool AddEventListener<T1, T2>(string eventType, Action<T1, T2> handler)
         {
-            return m_eventMgr.Dispatcher.AddEventListener(EventString2IdUtil.EventString2Id(eventType), handler);
+            return m_eventMgr.Dispatcher.AddEventListener(GameEventUtil.ToStringId(eventType), handler);
         }
 
         /// <summary>
@@ -185,7 +185,7 @@ namespace QFramework
         /// <returns></returns>
         public static bool AddEventListener<T1, T2, T3>(string eventType, Action<T1, T2, T3> handler)
         {
-            return m_eventMgr.Dispatcher.AddEventListener(EventString2IdUtil.EventString2Id(eventType), handler);
+            return m_eventMgr.Dispatcher.AddEventListener(GameEventUtil.ToStringId(eventType), handler);
         }
 
         /// <summary>
@@ -200,7 +200,7 @@ namespace QFramework
         /// <returns></returns>
         public static bool AddEventListener<T1, T2, T3, T4>(string eventType, Action<T1, T2, T3, T4> handler)
         {
-            return m_eventMgr.Dispatcher.AddEventListener(EventString2IdUtil.EventString2Id(eventType), handler);
+            return m_eventMgr.Dispatcher.AddEventListener(GameEventUtil.ToStringId(eventType), handler);
         }
 
         /// <summary>
@@ -216,7 +216,7 @@ namespace QFramework
         /// <returns></returns>
         public static bool AddEventListener<T1, T2, T3, T4, T5>(string eventType, Action<T1, T2, T3, T4, T5> handler)
         {
-            return m_eventMgr.Dispatcher.AddEventListener(EventString2IdUtil.EventString2Id(eventType), handler);
+            return m_eventMgr.Dispatcher.AddEventListener(GameEventUtil.ToStringId(eventType), handler);
         }
 
         /// <summary>
@@ -233,7 +233,7 @@ namespace QFramework
         /// <returns></returns>
         public static bool AddEventListener<T1, T2, T3, T4, T5, T6>(string eventType, Action<T1, T2, T3, T4, T5, T6> handler)
         {
-            return m_eventMgr.Dispatcher.AddEventListener(EventString2IdUtil.EventString2Id(eventType), handler);
+            return m_eventMgr.Dispatcher.AddEventListener(GameEventUtil.ToStringId(eventType), handler);
         }
 
         #endregion
@@ -257,7 +257,7 @@ namespace QFramework
         /// <param name="handler">事件处理回调。</param>
         public static void RemoveEventListener(string eventType, Delegate handler)
         {
-            m_eventMgr.Dispatcher.RemoveEventListener(EventString2IdUtil.EventString2Id(eventType), handler);
+            m_eventMgr.Dispatcher.RemoveEventListener(GameEventUtil.ToStringId(eventType), handler);
         }
 
         /// <summary>
@@ -358,7 +358,7 @@ namespace QFramework
         /// <param name="handler">事件处理回调。</param>
         public static void RemoveEventListener(string eventType, Action handler)
         {
-            m_eventMgr.Dispatcher.RemoveEventListener(EventString2IdUtil.EventString2Id(eventType), handler);
+            m_eventMgr.Dispatcher.RemoveEventListener(GameEventUtil.ToStringId(eventType), handler);
         }
 
         /// <summary>
@@ -369,7 +369,7 @@ namespace QFramework
         /// <typeparam name="T1">事件参数1类型。</typeparam>
         public static void RemoveEventListener<T1>(string eventType, Action<T1> handler)
         {
-            m_eventMgr.Dispatcher.RemoveEventListener(EventString2IdUtil.EventString2Id(eventType), handler);
+            m_eventMgr.Dispatcher.RemoveEventListener(GameEventUtil.ToStringId(eventType), handler);
         }
 
         /// <summary>
@@ -381,7 +381,7 @@ namespace QFramework
         /// <typeparam name="T2">事件参数2类型。</typeparam>
         public static void RemoveEventListener<T1, T2>(string eventType, Action<T1, T2> handler)
         {
-            m_eventMgr.Dispatcher.RemoveEventListener(EventString2IdUtil.EventString2Id(eventType), handler);
+            m_eventMgr.Dispatcher.RemoveEventListener(GameEventUtil.ToStringId(eventType), handler);
         }
 
         /// <summary>
@@ -394,7 +394,7 @@ namespace QFramework
         /// <typeparam name="T3">事件参数3类型。</typeparam>
         public static void RemoveEventListener<T1, T2, T3>(string eventType, Action<T1, T2, T3> handler)
         {
-            m_eventMgr.Dispatcher.RemoveEventListener(EventString2IdUtil.EventString2Id(eventType), handler);
+            m_eventMgr.Dispatcher.RemoveEventListener(GameEventUtil.ToStringId(eventType), handler);
         }
 
         /// <summary>
@@ -408,7 +408,7 @@ namespace QFramework
         /// <typeparam name="T4">事件参数4类型。</typeparam>
         public static void RemoveEventListener<T1, T2, T3, T4>(string eventType, Action<T1, T2, T3, T4> handler)
         {
-            m_eventMgr.Dispatcher.RemoveEventListener(EventString2IdUtil.EventString2Id(eventType), handler);
+            m_eventMgr.Dispatcher.RemoveEventListener(GameEventUtil.ToStringId(eventType), handler);
         }
 
         /// <summary>
@@ -423,7 +423,7 @@ namespace QFramework
         /// <typeparam name="T5">事件参数5类型。</typeparam>
         public static void RemoveEventListener<T1, T2, T3, T4, T5>(string eventType, Action<T1, T2, T3, T4, T5> handler)
         {
-            m_eventMgr.Dispatcher.RemoveEventListener(EventString2IdUtil.EventString2Id(eventType), handler);
+            m_eventMgr.Dispatcher.RemoveEventListener(GameEventUtil.ToStringId(eventType), handler);
         }
 
         /// <summary>
@@ -439,7 +439,7 @@ namespace QFramework
         /// <typeparam name="T6">事件参数6类型。</typeparam>
         public static void RemoveEventListener<T1, T2, T3, T4, T5, T6>(string eventType, Action<T1, T2, T3, T4, T5, T6> handler)
         {
-            m_eventMgr.Dispatcher.RemoveEventListener(EventString2IdUtil.EventString2Id(eventType), handler);
+            m_eventMgr.Dispatcher.RemoveEventListener(GameEventUtil.ToStringId(eventType), handler);
         }
 
         #endregion
@@ -557,7 +557,7 @@ namespace QFramework
         /// <param name="eventType">事件类型。</param>
         public static void TriggerEvent<T1>(string eventType)
         {
-            m_eventMgr.Dispatcher.TriggerEvent(EventString2IdUtil.EventString2Id(eventType));
+            m_eventMgr.Dispatcher.TriggerEvent(GameEventUtil.ToStringId(eventType));
         }
 
         /// <summary>
@@ -568,7 +568,7 @@ namespace QFramework
         /// <typeparam name="T1">事件参数1类型。</typeparam>
         public static void TriggerEvent<T1>(string eventType, T1 t1)
         {
-            m_eventMgr.Dispatcher.TriggerEvent(EventString2IdUtil.EventString2Id(eventType), t1);
+            m_eventMgr.Dispatcher.TriggerEvent(GameEventUtil.ToStringId(eventType), t1);
         }
 
         /// <summary>
@@ -581,7 +581,7 @@ namespace QFramework
         /// <typeparam name="T2">事件参数2类型。</typeparam>
         public static void TriggerEvent<T1, T2>(string eventType, T1 t1, T2 t2)
         {
-            m_eventMgr.Dispatcher.TriggerEvent(EventString2IdUtil.EventString2Id(eventType), t1, t2);
+            m_eventMgr.Dispatcher.TriggerEvent(GameEventUtil.ToStringId(eventType), t1, t2);
         }
 
         /// <summary>
@@ -596,7 +596,7 @@ namespace QFramework
         /// <typeparam name="T3">事件参数3类型。</typeparam>
         public static void TriggerEvent<T1, T2, T3>(string eventType, T1 t1, T2 t2, T3 t3)
         {
-            m_eventMgr.Dispatcher.TriggerEvent(EventString2IdUtil.EventString2Id(eventType), t1, t2, t3);
+            m_eventMgr.Dispatcher.TriggerEvent(GameEventUtil.ToStringId(eventType), t1, t2, t3);
         }
 
         /// <summary>
@@ -613,7 +613,7 @@ namespace QFramework
         /// <typeparam name="T4">事件参数4类型。</typeparam>
         public static void TriggerEvent<T1, T2, T3, T4>(string eventType, T1 t1, T2 t2, T3 t3, T4 t4)
         {
-            m_eventMgr.Dispatcher.TriggerEvent(EventString2IdUtil.EventString2Id(eventType), t1, t2, t3, t4);
+            m_eventMgr.Dispatcher.TriggerEvent(GameEventUtil.ToStringId(eventType), t1, t2, t3, t4);
         }
 
         /// <summary>
@@ -632,7 +632,7 @@ namespace QFramework
         /// <typeparam name="T5">事件参数5类型。</typeparam>
         public static void TriggerEvent<T1, T2, T3, T4, T5>(string eventType, T1 t1, T2 t2, T3 t3, T4 t4, T5 t5)
         {
-            m_eventMgr.Dispatcher.TriggerEvent(EventString2IdUtil.EventString2Id(eventType), t1, t2, t3, t4, t5);
+            m_eventMgr.Dispatcher.TriggerEvent(GameEventUtil.ToStringId(eventType), t1, t2, t3, t4, t5);
         }
 
         /// <summary>
@@ -653,7 +653,7 @@ namespace QFramework
         /// <typeparam name="T6">事件参数6类型。</typeparam>
         public static void TriggerEvent<T1, T2, T3, T4, T5, T6>(string eventType, T1 t1, T2 t2, T3 t3, T4 t4, T5 t5, T6 t6)
         {
-            m_eventMgr.Dispatcher.TriggerEvent(EventString2IdUtil.EventString2Id(eventType), t1, t2, t3, t4, t5, t6);
+            m_eventMgr.Dispatcher.TriggerEvent(GameEventUtil.ToStringId(eventType), t1, t2, t3, t4, t5, t6);
         }
 
         #endregion
