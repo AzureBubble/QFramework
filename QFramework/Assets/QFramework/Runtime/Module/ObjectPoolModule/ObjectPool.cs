@@ -530,10 +530,10 @@ namespace QFramework
 
             public override void OnRelease()
             {
-                foreach (KeyValuePair<object, PoolObject<T>> objectInMap in m_objectMap)
+                foreach (var objectInMap in m_objectMap.Values)
                 {
-                    objectInMap.Value.Release(true);
-                    MemoryPoolMgr.Release(objectInMap.Value);
+                    objectInMap.Release(true);
+                    MemoryPoolMgr.Release(objectInMap);
                 }
 
                 m_objects.Clear();

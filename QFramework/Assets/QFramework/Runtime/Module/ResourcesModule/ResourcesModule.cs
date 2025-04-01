@@ -7,7 +7,7 @@ using Object = UnityEngine.Object;
 
 namespace QFramework
 {
-    public class ResourcesModule : Module, IResourcesModule
+    public sealed partial class ResourcesModule : Module, IResourcesModule
     {
         public override void OnInit()
         {
@@ -58,11 +58,6 @@ namespace QFramework
         #endregion
 
         #region 卸载资源相关
-
-        public void UnloadAsset(object asset)
-        {
-            throw new NotImplementedException();
-        }
 
         public void UnloadUnusedAssets()
         {
