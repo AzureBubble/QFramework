@@ -85,6 +85,6 @@ namespace QFramework
         /// </summary>
         /// <param name="location">场景资源定位地址。</param>
         /// <returns>是否包含场景。</returns>
-        public bool IsContainScene(string location);
+        public bool ContainScene(string location);
     }
 }

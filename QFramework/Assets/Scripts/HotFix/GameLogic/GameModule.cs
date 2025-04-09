@@ -52,11 +52,22 @@ public class GameModule
     // private static IProcedureModule _procedure;
 
     /// <summary>
-    /// 获取资源模块。
+    /// 获取资源管理模块。
     /// </summary>
-    // public static IResourceModule Resource => _resource ??= Get<IResourceModule>();
-    //
-    // private static IResourceModule _resource;
+    public static IResourcesModule ResourceMgr
+    {
+        get
+        {
+            if (m_resourceMgr == null)
+            {
+                m_resourceMgr = Get<IResourcesModule>();
+            }
+
+            return m_resourceMgr;
+        }
+    }
+
+    private static IResourcesModule m_resourceMgr;
 
     /// <summary>
     /// 获取音频模块。
@@ -75,9 +86,20 @@ public class GameModule
     /// <summary>
     /// 获取场景模块。
     /// </summary>
-    // public static ISceneModule Scene => _scene ??= Get<ISceneModule>();
-    //
-    // private static ISceneModule _scene;
+    public static ISceneModule SceneMgr
+    {
+        get
+        {
+            if (m_sceneMgr == null)
+            {
+                m_sceneMgr = Get<ISceneModule>();
+            }
+
+            return m_sceneMgr;
+        }
+    }
+
+    private static ISceneModule m_sceneMgr;
 
     /// <summary>
     /// 获取计时器模块。
@@ -126,10 +148,10 @@ public class GameModule
         // _debugger = null;
         // _fsm = null;
         // _procedure = null;
-        // _resource = null;
+        m_resourceMgr = null;
         // _audio = null;
         // _ui = null;
-        // _scene = null;
+        m_sceneMgr = null;
         m_gameTimerMgr = null;
         // _localization = null;
     }
